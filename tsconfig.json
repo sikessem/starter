@@ -1,0 +1,79 @@
+{
+  "include": [
+    "app/res/assets/types/**/*",
+    "app/res/assets/scripts/**/*",
+    "app/res/views/**/*",
+  ],
+  "exclude": [
+    "node_modules",
+  ],
+  "compilerOptions": {
+    "allowJs": true,
+    "target": "ES2017",
+    "module": "ES2020",
+    "lib": [
+      "es2020",
+      "DOM",
+      "WebWorker",
+      "DOM.Iterable"
+    ],
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "moduleResolution": "Node",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "incremental": true,
+    "isolatedModules": true,
+    "outDir": "tmp",
+    "noEmit": true,
+    "typeRoots": [
+      "./app/res/assets/types",
+      "./node_modules/@types",
+      "./node_modules",
+    ],
+    "types": [
+      "node",
+      "vite/client",
+      "vitest/globals",
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "App/Assets/*": [
+        "app/res/assets/*",
+      ],
+      "App/Images/*": [
+        "app/res/assets/images/*",
+      ],
+      "App/Styles/*": [
+        "app/res/assets/styles/*",
+      ],
+      "App/Scripts/*": [
+        "app/res/assets/scripts/*",
+      ],
+      "App/Types/*": [
+        "app/res/assets/types/*",
+      ],
+    },
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "sourceMap": true,
+    "allowSyntheticDefaultImports": true,
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+    "declaration": true,
+    "declarationMap": true,
+    "noImplicitReturns": true,
+    "pretty": true,
+    "useDefineForClassFields": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": false,
+    "noFallthroughCasesInSwitch": true,
+    "downlevelIteration": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+  },
+  "files": ["rome.json"],
+}

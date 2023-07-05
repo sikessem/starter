@@ -1,0 +1,11 @@
+@import './vendor';
+
+[cloak] {
+    @apply hidden;
+}
+
+.app {
+    &-brand {
+        content: url('../images/logo.svg');
+    }
+}

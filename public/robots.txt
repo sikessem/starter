@@ -1,0 +1,7 @@
+# www.robotstxt.org/
+
+User-agent: *
+
+Disallow:
+
+Sitemap: https://sikessem.com/sitemap.xml

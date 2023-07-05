@@ -1,0 +1,15 @@
+* text=auto
+
+*.blade.php diff=html
+*.css diff=css
+*.html diff=html
+*.php diff=php
+*.md diff=markdown
+*.mdx diff=markdown
+*.js diff=javascript
+*.jsx diff=javascript
+*.ts diff=typescript
+*.tsx diff=typescript
+
+/.github export-ignore
+CHANGELOG.md export-ignore
