@@ -2,17 +2,20 @@
     "private": true,
     "type": "module",
     "engines": {
-        "node": "^18.16"
+      "node": ">=18.16",
+      "pnpm": ">=8.0.0",
+      "npm": "prefer using pnpm",
+      "yarn": "prefer using pnpm"
+    },
+    "packageManager": "pnpm@8.6.6",
+    "publishConfig": {
+      "access": "public"
     },
     "homepage": "https://sikessem.com",
     "author": {
         "name": "SIGUI Kessé Emmanuel",
         "email": "contact@sigui.ci",
         "url": "https://sigui.ci"
-    },
-    "packageManager": "pnpm@8.6.5",
-    "publishConfig": {
-        "access": "public"
     },
     "scripts": {
         "build": "vite build",

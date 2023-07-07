@@ -212,10 +212,10 @@ composer debug
 
 ## 📋 Requirements
 
-> - **Requires [PHP 8.1+](https://php.net/releases/)** (at least 8.1.19 recommended to avoid potential bugs).
-> - **Requires [Node JS 18.16+](https://nodejs.org/)** (at least 18.16.0 recommended to avoid potential bugs).
+> - **Requires [PHP 8.1+](https://php.net/releases/)** (at least 8.1.21 recommended to avoid potential bugs).
+> - **Requires [Node JS 18.16+](https://nodejs.org/)** (at least 18.16.1 recommended to avoid potential bugs).
 > - **Requires [Composer >=2.5.8](https://getcomposer.org/)** to manage [PHP][php-link] dependencies.
-> - **Requires [pnpm@^8.6.5](https://pnpm.io/)** to manage [JS][javascript-link] and [TS][typescript-link] dependencies.
+> - **Requires [pnpm@^8.0.0](https://pnpm.io/)** to manage [JS][javascript-link] and [TS][typescript-link] dependencies.
 > - **Requires [Git ~2.40.0](https://git-scm.com/)** to manage source code versions.
 
 ## 📖 Documentation
