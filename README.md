@@ -54,15 +54,29 @@
 [discuss-link]: https://github.com/orgs/sikessem/discussions
 [docs-link]: https://github.com/sikessem/starter#readme "Starter Documentation"
 
+[php-home]: https://php.net
+[laravel-home]: https://laravel.com "Laravel"
+[livewire-home]: https://laravel-livewire.com "Laravel Livewire"
+[typescript-home]: https://www.typescriptlang.org "TypeScript"
+[alpinejs-home]: https://alpinejs.dev "Alpine.js"
+[tailwindcss-home]: https://tailwindcss.com "TailwindCSS"
+[vitejs-home]: https://vitejs.dev "Vite.js"
+[rome-home]: https://rome.tools "Rome"
+[vitest-home]: https://vitest.dev "Vitest"
+[pint-home]: https://github.com/laravel/pint "Laravel Pint"
+[phpstan-home]: https://phpstan.org "PHPStan"
+[larastan-home]: https://github.com/nunomaduro/larastan "Larastan"
+[rector-home]: https://getrector.com "Rector"
+
 ***
 
-# 📦️ Sikessem Starter
+# Sikessem Starter
 
-Create a new Sikessem project based on this template.
+Start [PHP][php-home] applications using [Laravel][laravel-home] preconfigured with [TypeScript][typescript-home], [Livewire][livewire-home], [Alpine.js][alpinejs-home], [TailwindCSS][tailwindcss-home] and many others such as [Vite.js][vitejs-home], [Rome][rome-home], [Vitest][vitest-home], [Pint][pint-home], [PHPStan][phpstan-home], [Larastan][larastan-home], [Rector][rector-home], etc.
 
 ## 🔖 Contents
 
-- [📦️ Sikessem Starter](#️-sikessem-starter)
+- [Sikessem Starter](#sikessem-starter)
   - [🔖 Contents](#-contents)
   - [🎉 Getting Started](#-getting-started)
     - [⚡️ Installation](#️-installation)
