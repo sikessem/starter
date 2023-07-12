@@ -2,14 +2,14 @@
     "private": true,
     "type": "module",
     "engines": {
-      "node": ">=18.16",
-      "pnpm": ">=8.0.0",
-      "npm": "prefer using pnpm",
-      "yarn": "prefer using pnpm"
+        "node": ">=18.16",
+        "pnpm": ">=8.0.0",
+        "npm": "prefer using pnpm",
+        "yarn": "prefer using pnpm"
     },
     "packageManager": "pnpm@8.6.6",
     "publishConfig": {
-      "access": "public"
+        "access": "public"
     },
     "homepage": "https://sikessem.com",
     "author": {
@@ -47,6 +47,7 @@
         "@types/alpinejs__focus": "^3.10.0",
         "@types/node": "^20.4.0",
         "@types/node-fetch": "^2.6.4",
+        "@vitest/coverage-c8": "^0.33.0",
         "alpinejs": "^3.12.3",
         "autoprefixer": "^10.4.14",
         "axios": "^1.4.0",
