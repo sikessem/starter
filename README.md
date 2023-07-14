@@ -42,7 +42,7 @@
 [actions-link]: https://github.com/sikessem/starter/actions "Starter status"
 
 [pr-icon]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg?color=brightgreen
-[pr-link]: [contrib-link] "PRs welcome!"
+[pr-link]: https://github.com/sikessem/.github/blob/HEAD/CONTRIBUTING.md "PRs welcome!"
 
 [twitter-icon]: https://img.shields.io/twitter/follow/sikessem_tweets.svg?label=@sikessem_tweets
 [twitter-link]: https://twitter.com/intent/follow?screen_name=sikessem_tweets "Ping Sikessem"
@@ -50,7 +50,6 @@
 [license-icon]: https://img.shields.io/badge/license-MIT-blue.svg
 [license-link]: https://github.com/sikessem/starter/blob/HEAD/LICENSE "Starter License"
 [conduct-link]: https://github.com/sikessem/starter/blob/HEAD/CODE_OF_CONDUCT.md
-[contrib-link]: https://github.com/sikessem/.github/blob/HEAD/CONTRIBUTING.md
 [discuss-link]: https://github.com/orgs/sikessem/discussions
 [docs-link]: https://github.com/sikessem/starter#readme "Starter Documentation"
 
@@ -231,9 +230,9 @@ The main purpose of this repository is to continue evolving Sikessem. We want to
 Sikessem has adopted a Code of Conduct that we expect project participants to adhere to.
 Please read the [full text][conduct-link] so that you can understand what actions will and will not be tolerated.
 
-### 👥 [Contributing Guide][contrib-link]
+### 👥 [Contributing Guide][pr-link]
 
-Read our [**Contributing Guide**][contrib-link] to learn about our development process, how to propose bugfixes and improvements, and how to build and test your changes to Sikessem.
+Read our [**Contributing Guide**][pr-link] to learn about our development process, how to propose bugfixes and improvements, and how to build and test your changes to Sikessem.
 
 ### 🔒️ Good First Issues
 
