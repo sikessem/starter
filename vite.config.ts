@@ -1,7 +1,7 @@
-import laravel, { refreshPaths } from "laravel-vite-plugin";
 import fs from "node:fs";
 import { homedir } from "node:os";
 import { resolve } from "node:path";
+import laravel, { refreshPaths } from "laravel-vite-plugin";
 import { ServerOptions, defineConfig, loadEnv } from "vite";
 import tsconfigPaths from "vite-tsconfig-paths";
 

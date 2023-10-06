@@ -75,5 +75,5 @@
     "experimentalDecorators": true,
     "importHelpers": true,
   },
-  "files": ["rome.json"],
+  "files": ["biome.json"],
 }
