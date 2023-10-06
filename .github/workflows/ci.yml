@@ -13,9 +13,9 @@ jobs:
       matrix:
         operating-system: [ubuntu-latest]
         php-version: [8.1, 8.2]
-        node-version: [18.0, 20.0]
+        bun-version: [1.0.4]
         dependency-version: [prefer-lowest, prefer-stable]
-    name: 👷 CI PHP-${{ matrix.php-version }} ${{ matrix.dependency-version }} with Node-${{ matrix.node-version }} on ${{ matrix.operating-system }}
+    name: 👷 CI PHP-${{ matrix.php-version }} ${{ matrix.dependency-version }} with Bun-${{ matrix.bun-version }} on ${{ matrix.operating-system }}
 
     steps:
       - name: Checkout
@@ -80,23 +80,22 @@ jobs:
       - name: Optimize Stuffs
         run: set -e && php artisan optimize:clear --env=ci
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v1
         with:
-          node-version: ${{ matrix.node-version }}
+          bun-version: ${{ matrix.bun-version }}
 
       - name: Install JavaScript dependencies
         run: |
-          corepack enable
-          pnpm install
-          pnpm e2e.install
+          bun install
+          bun run e2e.install
 
       - name: 🍱 Compile assets
-        run: pnpm build
+        run: bun run build
 
       - name: 🧹 Check code lint
         run: |
-          pnpm check
+          bun run check
           composer check
 
       - name: ⚗️ Run static analysis
@@ -107,13 +106,13 @@ jobs:
         run: |
           php artisan optimize --env=ci
           set -e && php artisan serve --env=ci > /dev/null 2>&1 &
-          pnpm test
+          bun run test
           composer test
 
       - name: 🚀 Execute end-to-end testing
-        run: pnpm e2e
+        run: bun run e2e
 
       - name: 🧪 Test the whole application
         run: |
           composer debug
-          pnpm debug
+          bun run debug

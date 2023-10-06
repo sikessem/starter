@@ -123,7 +123,7 @@ composer install
 Install JS / TS dependencies:
 
 ```shell
-pnpm install
+bun install
 ```
 
 🍱 Build assets
@@ -131,7 +131,7 @@ pnpm install
 The production build will generate client and server modules by running both client and server build commands:
 
 ```shell
-pnpm build
+bun run build
 ```
 
 ### 🗃️ Manage Database
@@ -159,7 +159,7 @@ Then visit [http://my-app.local:8000/](http://my-app.local:8000/)
 - with **Rome**:
 
 ```shell
-pnpm check
+bun run check
 ```
 
 - with **Pint**:
@@ -181,7 +181,7 @@ composer analyse
 - using **Vitest**:
 
 ```shell
-pnpm test
+bun run test
 ```
 
 - using **PEST**:
@@ -193,7 +193,7 @@ composer test
 🚀 Execute end-to-end testing with **Playwright**:
 
 ```shell
-pnpm e2e
+bun run e2e
 ```
 
 #### 🐛 Check all code bugs
@@ -201,7 +201,7 @@ pnpm e2e
 - Frontend:
 
 ```shell
-pnpm debug
+bun run debug
 
 - Backend:
 
@@ -212,9 +212,8 @@ composer debug
 ## 📋 Requirements
 
 > - **Requires [PHP 8.1+](https://php.net/releases/)** (at least 8.1.21 recommended to avoid potential bugs).
-> - **Requires [Node JS 18.16+](https://nodejs.org/)** (at least 18.16.1 recommended to avoid potential bugs).
+> - **Requires [Bun 1.0+](https://bun.sh/)** (at least 1.0.4 recommended to avoid potential bugs).
 > - **Requires [Composer >=2.5.8](https://getcomposer.org/)** to manage [PHP][php-link] dependencies.
-> - **Requires [pnpm@^8.0.0](https://pnpm.io/)** to manage [JS][javascript-link] and [TS][typescript-link] dependencies.
 > - **Requires [Git ~2.40.0](https://git-scm.com/)** to manage source code versions.
 
 ## 📖 Documentation
