@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c5a004269408ec53a21a0bbf4fb322a6",
+    "content-hash": "9a8b1b3342fb787a7b841eb28fa6f436",
     "packages": [
         {
             "name": "brick/math",
@@ -11052,21 +11052,21 @@
         },
         {
             "name": "rector/rector",
-            "version": "0.16.0",
+            "version": "0.18.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rectorphp/rector.git",
-                "reference": "2125ff71ea05b079562a8f59ca48a97eb78dc07f"
+                "reference": "2a3b82f317e431fc142d21f3303891a4e64c96eb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rectorphp/rector/zipball/2125ff71ea05b079562a8f59ca48a97eb78dc07f",
-                "reference": "2125ff71ea05b079562a8f59ca48a97eb78dc07f",
+                "url": "https://api.github.com/repos/rectorphp/rector/zipball/2a3b82f317e431fc142d21f3303891a4e64c96eb",
+                "reference": "2a3b82f317e431fc142d21f3303891a4e64c96eb",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.2|^8.0",
-                "phpstan/phpstan": "^1.10.14"
+                "phpstan/phpstan": "^1.10.35"
             },
             "conflict": {
                 "rector/rector-doctrine": "*",
@@ -11078,11 +11078,6 @@
                 "bin/rector"
             ],
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-main": "0.15-dev"
-                }
-            },
             "autoload": {
                 "files": [
                     "bootstrap.php"
@@ -11101,7 +11096,7 @@
             ],
             "support": {
                 "issues": "https://github.com/rectorphp/rector/issues",
-                "source": "https://github.com/rectorphp/rector/tree/0.16.0"
+                "source": "https://github.com/rectorphp/rector/tree/0.18.5"
             },
             "funding": [
                 {
@@ -11109,7 +11104,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-05-05T12:12:17+00:00"
+            "time": "2023-10-05T11:25:40+00:00"
         },
         {
             "name": "sebastian/cli-parser",
@@ -12028,27 +12023,32 @@
         },
         {
             "name": "sikessem/devtools",
-            "version": "v0.0.0",
+            "version": "v0.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sikessem/devtools.git",
-                "reference": "d71ae96d07a02220db734263c2734ac19902c2f8"
+                "reference": "be4d5524ecd86747f3925fb341c0d279df4aaad4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sikessem/devtools/zipball/d71ae96d07a02220db734263c2734ac19902c2f8",
-                "reference": "d71ae96d07a02220db734263c2734ac19902c2f8",
+                "url": "https://api.github.com/repos/sikessem/devtools/zipball/be4d5524ecd86747f3925fb341c0d279df4aaad4",
+                "reference": "be4d5524ecd86747f3925fb341c0d279df4aaad4",
                 "shasum": ""
             },
             "require": {
-                "laravel/pint": "^1.10",
-                "pestphp/pest": "^2.6",
+                "fakerphp/faker": "^1.23",
+                "laravel/pint": "^1.13",
+                "mockery/mockery": "^1.6",
+                "nunomaduro/collision": "^7.9",
+                "pestphp/pest": "^2.21",
                 "php": "^8.1||^8.2",
                 "phpstan/phpstan": "^1.10",
-                "phpunit/phpunit": "^10.1",
-                "rector/rector": "^0.16",
-                "symfony/var-dumper": "^6.2",
-                "vimeo/psalm": "^5.12"
+                "phpunit/phpunit": "^10.4",
+                "rector/rector": "^0.18",
+                "spatie/ignition": "^1.11",
+                "spatie/ray": "^1.39",
+                "symfony/var-dumper": "^6.3",
+                "vimeo/psalm": "^5.15"
             },
             "type": "library",
             "extra": {
@@ -12073,12 +12073,29 @@
                 "Devtools",
                 "PHPStan",
                 "Pint",
+                "analyze-code",
+                "code-analyzer",
+                "code-inpector",
+                "collision",
+                "dd",
+                "debug",
+                "debugger",
                 "dev",
                 "dev-tools",
+                "die-dump",
+                "dump",
+                "fake",
+                "faker",
+                "ignition",
+                "inspect-code",
                 "lint",
+                "mock",
+                "mockery",
                 "pest",
                 "php",
+                "phpunit",
                 "psalm",
+                "ray",
                 "rector",
                 "refactor",
                 "sikessem",
@@ -12087,41 +12104,44 @@
                 "test-tools",
                 "testing",
                 "testing-tools",
-                "var-dump"
+                "var-dump",
+                "var-dumper",
+                "web-tools",
+                "webtools"
             ],
             "support": {
                 "chat": "https://github.com/orgs/sikessem/discussions",
                 "issues": "https://github.com/sikessem/devtools/issues",
                 "source": "https://github.com/sikessem/devtools"
             },
-            "time": "2023-06-09T00:58:36+00:00"
+            "time": "2023-10-07T11:30:46+00:00"
         },
         {
             "name": "sikessem/laravel-devtools",
-            "version": "v0.5.0",
+            "version": "v0.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sikessem/laravel-devtools.git",
-                "reference": "23f8c601e423c1e6853d93c6047705850c88392c"
+                "reference": "a40ed0c83d562275a48634b9a46f659471efd265"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sikessem/laravel-devtools/zipball/23f8c601e423c1e6853d93c6047705850c88392c",
-                "reference": "23f8c601e423c1e6853d93c6047705850c88392c",
+                "url": "https://api.github.com/repos/sikessem/laravel-devtools/zipball/a40ed0c83d562275a48634b9a46f659471efd265",
+                "reference": "a40ed0c83d562275a48634b9a46f659471efd265",
                 "shasum": ""
             },
             "require": {
                 "barryvdh/laravel-debugbar": "^3.9",
                 "laravel/sail": "^1.25",
                 "nunomaduro/larastan": "^2.6",
-                "orchestra/testbench": "^8.5",
+                "orchestra/testbench": "^8.12",
                 "pestphp/pest-plugin-faker": "^2.0",
-                "pestphp/pest-plugin-laravel": "^2.1",
+                "pestphp/pest-plugin-laravel": "^2.2",
                 "pestphp/pest-plugin-livewire": "^2.1",
                 "pestphp/pest-plugin-watch": "^2.0",
                 "php": "^8.1||^8.2",
                 "psalm/plugin-laravel": "^2.8",
-                "sikessem/webtools": "^0.0.0",
+                "sikessem/devtools": "^0.2.0",
                 "spatie/laravel-ignition": "^2.3",
                 "spatie/laravel-ray": "^1.33"
             },
@@ -12145,28 +12165,50 @@
             "description": "🧪 Sikessem development tools for Laravel applications.",
             "homepage": "https://packagist.org/packages/sikessem/laravel-devtools",
             "keywords": [
+                "Devtools",
                 "PHPStan",
                 "Pint",
+                "analyze-code",
+                "automated-testing ",
+                "code-analyzer",
+                "code-inpector",
+                "collision",
                 "dd",
+                "debug",
                 "debugbar",
+                "debugger",
                 "dev",
+                "dev-tools",
+                "die-dump",
                 "dump",
+                "fake",
+                "faker",
+                "ignition",
+                "inspect-code",
                 "laravel",
+                "laravel-debugbar",
                 "laravel-devtools",
+                "laravel-test-tools",
+                "laravel-testing-tools",
                 "laravel-tools",
                 "lint",
+                "mock",
+                "mockery",
                 "pest",
                 "php",
+                "phpunit",
                 "psalm",
                 "ray",
                 "rector",
                 "refactor",
                 "sikessem",
                 "test",
+                "test-automation",
                 "test-tools",
                 "testing",
                 "testing-tools",
                 "var-dump",
+                "var-dumper",
                 "web-tools",
                 "webtools"
             ],
@@ -12176,75 +12218,7 @@
                 "issues": "https://github.com/sikessem/laravel-devtools/issues",
                 "source": "https://github.com/sikessem/laravel-devtools"
             },
-            "time": "2023-10-06T13:31:09+00:00"
-        },
-        {
-            "name": "sikessem/webtools",
-            "version": "v0.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/sikessem/webtools.git",
-                "reference": "36633b7ac9bafdfc709d70c19ff36a8d755adb9d"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/sikessem/webtools/zipball/36633b7ac9bafdfc709d70c19ff36a8d755adb9d",
-                "reference": "36633b7ac9bafdfc709d70c19ff36a8d755adb9d",
-                "shasum": ""
-            },
-            "require": {
-                "fakerphp/faker": "^1.22",
-                "mockery/mockery": "^1.5",
-                "nunomaduro/collision": "^7.5",
-                "php": "^8.1||^8.2",
-                "sikessem/devtools": "^0.0",
-                "spatie/ignition": "^1.8"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-main": "0.x-dev"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "SIGUI Kessé Emmanuel",
-                    "email": "contact@sigui.ci",
-                    "homepage": "https://sigui.ci"
-                }
-            ],
-            "description": "🧪 Sikessem development tools for web applications.",
-            "homepage": "https://packagist.org/packages/sikessem/webtools",
-            "keywords": [
-                "PHPStan",
-                "Pint",
-                "dev",
-                "lint",
-                "pest",
-                "php",
-                "psalm",
-                "rector",
-                "refactor",
-                "sikessem",
-                "test",
-                "test-tools",
-                "testing",
-                "testing-tools",
-                "var-dump",
-                "web-tools",
-                "webtools"
-            ],
-            "support": {
-                "chat": "https://github.com/orgs/sikessem/discussions",
-                "email": "support@sikessem.com",
-                "issues": "https://github.com/sikessem/webtools/issues",
-                "source": "https://github.com/sikessem/webtools"
-            },
-            "time": "2023-06-06T10:42:40+00:00"
+            "time": "2023-10-07T11:55:23+00:00"
         },
         {
             "name": "spatie/array-to-xml",
