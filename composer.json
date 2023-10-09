@@ -46,7 +46,7 @@
         "spatie/laravel-sitemap": "^6.3"
     },
     "require-dev": {
-        "sikessem/laravel-devtools": "^0.6.0"
+        "sikessem/laravel-devtools": "^0.6.1"
     },
     "autoload": {
         "psr-4": {
