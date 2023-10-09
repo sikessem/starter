@@ -3,8 +3,8 @@
   "type": "module",
   "engines": {
     "bun": ">=1.0.0",
-    "bun run": "prefer using bun",
     "npm": "prefer using bun",
+    "pnpm": "prefer using bun",
     "yarn": "prefer using bun"
   },
   "packageManager": "bun@1.0.4",
@@ -18,25 +18,25 @@
     "url": "https://sigui.ci"
   },
   "scripts": {
-    "build": "vite build",
-    "check": "biome ci .",
-    "check.format": "biome format .",
-    "check.lint": "biome check .",
+    "build": "bun run --bun vite build",
+    "check": "bun run --bun biome ci .",
+    "check.format": "bun run --bun biome format .",
+    "check.lint": "bun run --bun biome check .",
     "debug": "bun run check && bun run test && bun run e2e",
-    "dev": "vite",
-    "e2e": "playwright test",
-    "e2e.install": "playwright install --with-deps",
-    "e2e.report": "playwright show-report",
-    "e2e.ui": "playwright test --ui",
+    "dev": "bun run --bun vite",
+    "e2e": "bun run --bun playwright test",
+    "e2e.install": "bun run --bun playwright install --with-deps",
+    "e2e.report": "bun run --bun playwright show-report",
+    "e2e.ui": "bun run --bun playwright test --ui",
     "fix": "bun run lint && bun run format",
-    "format": "biome format --write .",
+    "format": "bun run --bun biome format --write .",
     "inspect": "bun --inspect-brk ./node_modules/vite/bin/vite.js --force",
-    "lint": "biome check --apply-unsafe .",
+    "lint": "bun run --bun biome check --apply-unsafe .",
     "test": "bun test",
     "test.cov": "bun test --coverage",
     "test.hot": "bun test --hot",
     "test.watch": "bun test --watch",
-    "start": "vite --open"
+    "start": "bun run --bun vite --open"
   },
   "devDependencies": {
     "@alpinejs/focus": "^3.13.1",
