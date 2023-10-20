@@ -20,10 +20,10 @@ jobs:
     name: 👷 CI PHP-${{ matrix.php }} ${{ matrix.dependencies }} with Bun-${{ matrix.bun }} on ${{ matrix.os }}
 
     steps:
-      - name: Checkout
+      - name: 🚚 Get latest code
         uses: actions/checkout@v4
 
-      - name: Cache dependencies
+      - name: 📂 Cache dependencies
         id: composer-cache
         run: |
           echo "dir=$(composer config cache-files-dir)" >> $GITHUB_OUTPUT
@@ -34,7 +34,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-dependencies-php-${{ matrix.php }}-composer-
 
-      - name: Setup PHP
+      - name: ⚡️ Setup PHP
         uses: shivammathur/setup-php@v2
         with:
           php-version: ${{ matrix.php }}
@@ -44,10 +44,7 @@ jobs:
           coverage: pcov
 
       - name: Install Composer dependencies
-        uses: ramsey/composer-install@v2
-        with:
-          dependency-versions: ${{ matrix.dependencies }}
-          composer-options: --no-ansi --no-cache --no-interaction --no-scripts --no-progress --prefer-dist
+        run: composer update --${{ matrix.dependency-version }} --no-interaction --prefer-dist
 
       - name: Set CI Environment
         run: |
