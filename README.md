@@ -2,7 +2,7 @@
 
 [![sikessem-logo]][sikessem-link]
 
-<br/>
+<br>
 
 [![php-icon]][php-link]
 [![typescript-icon]][typescript-link]
@@ -17,61 +17,9 @@
 
 </div>
 
-[sikessem-logo]: https://github.com/sikessem/art/blob/HEAD/images/sikessem.svg
-[sikessem-link]: https://github.com/sikessem "Sikessem"
-
-[php-icon]: https://img.shields.io/badge/PHP-ccc.svg?style=flat&logo=php
-[php-link]: https://github.com/sikessem/starter/search?l=php "PHP code"
-
-[typescript-icon]: https://img.shields.io/badge/TypeScript-294E80.svg?logo=typescript
-[typescript-link]:  https://github.com/sikessem/starter/search?l=typescript "TypeScript code"
-
-[javascript-icon]: https://img.shields.io/badge/JavaScript-yellow.svg?logo=javascript
-[javascript-link]:  https://github.com/sikessem/starter/search?l=javascript "JavaScript code"
-
-[packagist-version-icon]: https://img.shields.io/packagist/v/sikessem/starter
-[packagist-version-link]: https://packagist.org/packages/sikessem/starter "Starter Releases"
-
-[packagist-download-icon]: https://img.shields.io/packagist/dt/sikessem/starter
-[packagist-download-link]: https://packagist.org/packages/sikessem/starter "Starter Downloads"
-
-[enabled-icon]: https://img.shields.io/badge/Starter-enabled-brightgreen.svg?style=flat
-[enabled-link]: https://github.com/sikessem/starter "Starter enabled"
-
-[actions-icon]: https://github.com/sikessem/starter/workflows/CI/badge.svg
-[actions-link]: https://github.com/sikessem/starter/actions "Starter status"
-
-[pr-icon]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg?color=brightgreen
-[pr-link]: https://github.com/sikessem/.github/blob/HEAD/CONTRIBUTING.md "PRs welcome!"
-
-[twitter-icon]: https://img.shields.io/twitter/follow/sikessem_tweets.svg?label=@sikessem_tweets
-[twitter-link]: https://twitter.com/intent/follow?screen_name=sikessem_tweets "Ping Sikessem"
-
-[license-icon]: https://img.shields.io/badge/license-MIT-blue.svg
-[license-link]: https://github.com/sikessem/starter/blob/HEAD/LICENSE "Starter License"
-[conduct-link]: https://github.com/sikessem/starter/blob/HEAD/CODE_OF_CONDUCT.md
-[discuss-link]: https://github.com/orgs/sikessem/discussions
-[docs-link]: https://github.com/sikessem/starter#readme "Starter Documentation"
-
-[php-home]: https://php.net
-[laravel-home]: https://laravel.com "Laravel"
-[livewire-home]: https://laravel-livewire.com "Laravel Livewire"
-[typescript-home]: https://www.typescriptlang.org "TypeScript"
-[alpinejs-home]: https://alpinejs.dev "Alpine.js"
-[tailwindcss-home]: https://tailwindcss.com "TailwindCSS"
-[vitejs-home]: https://vitejs.dev "Vite.js"
-[rome-home]: https://rome.tools "Rome"
-[vitest-home]: https://vitest.dev "Vitest"
-[pint-home]: https://github.com/laravel/pint "Laravel Pint"
-[phpstan-home]: https://phpstan.org "PHPStan"
-[larastan-home]: https://github.com/nunomaduro/larastan "Larastan"
-[rector-home]: https://getrector.com "Rector"
-
-***
-
 # Sikessem Starter
 
-Start [PHP][php-home] applications using [Laravel][laravel-home] preconfigured with [TypeScript][typescript-home], [Livewire][livewire-home], [Alpine.js][alpinejs-home], [TailwindCSS][tailwindcss-home] and many others such as [Vite.js][vitejs-home], [Rome][rome-home], [Vitest][vitest-home], [Pint][pint-home], [PHPStan][phpstan-home], [Larastan][larastan-home], [Rector][rector-home], etc.
+Start [PHP][php-home] applications using [Laravel][laravel-home] preconfigured with [TypeScript][typescript-home], [Livewire][livewire-home], [Alpine.js][alpinejs-home], [TailwindCSS][tailwindcss-home] and many others such as [Vite.js][vitejs-home], [Rome][rome-home], [Vitest][vitest-home], [Pint][pint-home], [PHPStan][phpstan-home], [Larastan][larastan-home], [Rector][rector-home]
 
 ## 🔖 Contents
 
@@ -202,6 +150,7 @@ bun run e2e
 
 ```shell
 bun run debug
+```
 
 - Backend:
 
@@ -211,10 +160,10 @@ composer debug
 
 ## 📋 Requirements
 
-> - **Requires [PHP 8.1+](https://php.net/releases/)** (at least 8.1.21 recommended to avoid potential bugs).
-> - **Requires [Bun 1.0+](https://bun.sh/)** (at least 1.0.4 recommended to avoid potential bugs).
-> - **Requires [Composer >=2.5.8](https://getcomposer.org/)** to manage [PHP][php-link] dependencies.
-> - **Requires [Git ~2.40.0](https://git-scm.com/)** to manage source code versions.
+- **Requires [PHP 8.1+](https://php.net/releases/)** (at least 8.1.21 recommended to avoid potential bugs).
+- **Requires [Bun 1.0+](https://bun.sh/)** (at least 1.0.4 recommended to avoid potential bugs).
+- **Requires [Composer >=2.5.8](https://getcomposer.org/)** to manage [PHP][php-link] dependencies.
+- **Requires [Git ~2.40.0](https://git-scm.com/)** to manage source code.
 
 ## 📖 Documentation
 
@@ -237,8 +186,6 @@ Read our [**Contributing Guide**][pr-link] to learn about our development proces
 
 We have a list of [good first issues][gfi] that contain bugs which have a relatively limited scope. This is a great place to get started, gain experience, and get familiar with our contribution process.
 
-[gfi]: https://github.com/sikessem/starter/labels/good%20first%20issue
-
 ### 💬 Discussions
 
 Larger discussions and proposals are discussed in [**Sikessem's GitHub discussions**][discuss-link].
@@ -251,6 +198,58 @@ If you discover a security vulnerability within [Sikessem](https://sikessem.com)
 
 The Sikessem Starter is open-sourced software licensed under the  [MIT License](https://opensource.org/licenses/MIT) - see the [LICENSE][license-link] file for details.
 
-***
+---
 
 <div align="center"><sub>Made with ❤︎ by <a href="https://twitter.com/intent/follow?screen_name=siguici" style="content:url(https://img.shields.io/twitter/follow/siguici.svg?label=@siguici);margin-bottom:-6px">@siguici</a>.</sub></div>
+
+[sikessem-logo]: https://github.com/sikessem/art/blob/HEAD/images/sikessem.svg
+[sikessem-link]: https://github.com/sikessem "Sikessem"
+
+[php-icon]: https://img.shields.io/badge/PHP-ccc.svg?style=flat&logo=php
+[php-link]: https://github.com/sikessem/starter/search?l=php "PHP code"
+
+[typescript-icon]: https://img.shields.io/badge/TypeScript-294E80.svg?logo=typescript
+[typescript-link]:  https://github.com/sikessem/starter/search?l=typescript "TypeScript code"
+
+[javascript-icon]: https://img.shields.io/badge/JavaScript-yellow.svg?logo=javascript
+[javascript-link]:  https://github.com/sikessem/starter/search?l=javascript "JavaScript code"
+
+[packagist-version-icon]: https://img.shields.io/packagist/v/sikessem/starter
+[packagist-version-link]: https://packagist.org/packages/sikessem/starter "Starter Releases"
+
+[packagist-download-icon]: https://img.shields.io/packagist/dt/sikessem/starter
+[packagist-download-link]: https://packagist.org/packages/sikessem/starter "Starter Downloads"
+
+[enabled-icon]: https://img.shields.io/badge/Starter-enabled-brightgreen.svg?style=flat
+[enabled-link]: https://github.com/sikessem/starter "Starter enabled"
+
+[actions-icon]: https://github.com/sikessem/starter/workflows/CI/badge.svg
+[actions-link]: https://github.com/sikessem/starter/actions "Starter status"
+
+[pr-icon]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg?color=brightgreen
+[pr-link]: https://github.com/sikessem/.github/blob/HEAD/CONTRIBUTING.md "PRs welcome!"
+
+[twitter-icon]: https://img.shields.io/twitter/follow/sikessem_tweets.svg?label=@sikessem_tweets
+[twitter-link]: https://twitter.com/intent/follow?screen_name=sikessem_tweets "Ping Sikessem"
+
+[license-icon]: https://img.shields.io/badge/license-MIT-blue.svg
+[license-link]: https://github.com/sikessem/starter/blob/HEAD/LICENSE "Starter License"
+[conduct-link]: https://github.com/sikessem/starter/blob/HEAD/CODE_OF_CONDUCT.md
+[discuss-link]: https://github.com/orgs/sikessem/discussions
+[docs-link]: https://github.com/sikessem/starter#readme "Starter Documentation"
+
+[gfi]: https://github.com/sikessem/starter/labels/good%20first%20issue
+
+[php-home]: https://php.net
+[laravel-home]: https://laravel.com "Laravel"
+[livewire-home]: https://laravel-livewire.com "Laravel Livewire"
+[typescript-home]: https://www.typescriptlang.org "TypeScript"
+[alpinejs-home]: https://alpinejs.dev "Alpine.js"
+[tailwindcss-home]: https://tailwindcss.com "TailwindCSS"
+[vitejs-home]: https://vitejs.dev "Vite.js"
+[rome-home]: https://rome.tools "Rome"
+[vitest-home]: https://vitest.dev "Vitest"
+[pint-home]: https://github.com/laravel/pint "Laravel Pint"
+[phpstan-home]: https://phpstan.org "PHPStan"
+[larastan-home]: https://github.com/nunomaduro/larastan "Larastan"
+[rector-home]: https://getrector.com "Rector"
