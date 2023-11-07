@@ -20,10 +20,10 @@ export default defineConfig(({ mode }) => {
     plugins: [
       laravel({
         input: [
-          "app/res/assets/styles/app.css",
-          "app/res/assets/scripts/app.ts",
+          "resources/assets/styles/app.css",
+          "resources/assets/scripts/app.ts",
         ],
-        refresh: [...refreshPaths, "app/res/views/**", "app/src/Views/**"],
+        refresh: [...refreshPaths, "templates/**", "app/Views/**"],
         buildDirectory,
       }),
       tsconfigPaths(),
@@ -35,11 +35,11 @@ export default defineConfig(({ mode }) => {
     },
     resolve: {
       alias: {
-        "@assets": "app/res/assets",
-        "@images": "app/res/assets/images",
-        "@scripts": "app/res/assets/scripts",
-        "@styles": "app/res/assets/styles",
-        "@types": "app/res/assets/types",
+        "@assets": "resources/assets",
+        "@images": "resources/assets/images",
+        "@scripts": "resources/assets/scripts",
+        "@styles": "resources/assets/styles",
+        "@types": "resources/assets/types",
       },
     },
   };

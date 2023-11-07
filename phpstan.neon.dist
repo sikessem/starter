@@ -4,7 +4,8 @@ includes:
 parameters:
     level: max
     paths:
-        - app/src
+        - app
+        - src
 
     reportUnmatchedIgnoredErrors: true
     checkMissingIterableValueType: false
