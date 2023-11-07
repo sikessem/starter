@@ -1,27 +1,26 @@
 {
-    "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
-    "organizeImports": {
-        "enabled": true,
-        "ignore": ["node_modules", "vendor", "storage", "public/static"]
+  "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+  "organizeImports": {
+    "enabled": true,
+    "ignore": ["node_modules", "vendor", "storage", "public/static"]
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": true,
+      "style": {
+        "useBlockStatements": "error",
+        "useShorthandArrayType": "error",
+        "noShoutyConstants": "warn"
+      }
     },
-    "linter": {
-        "enabled": true,
-        "rules": {
-            "recommended": true,
-            "style": {
-                "useBlockStatements": "error",
-                "useShorthandArrayType": "error",
-                "noShoutyConstants": "warn"
-            }
-        },
-        "ignore": ["node_modules", "vendor", "storage", "public/static"]
-    },
-    "formatter": {
-        "enabled": true,
-        "formatWithErrors": false,
-        "indentStyle": "space",
-        "indentSize": 4,
-        "lineWidth": 80,
-        "ignore": ["node_modules", "vendor", "storage", "public/static"]
-    }
+    "ignore": ["node_modules", "vendor", "storage", "public/static"]
+  },
+  "formatter": {
+    "enabled": true,
+    "formatWithErrors": false,
+    "indentStyle": "space",
+    "lineWidth": 80,
+    "ignore": ["node_modules", "vendor", "storage", "public/static"]
+  }
 }
