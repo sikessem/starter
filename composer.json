@@ -1,9 +1,10 @@
 {
   "type": "project",
   "name": "sikessem/starter",
-  "description": "Start PHP applications using Laravel preconfigured with TypeScript, Livewire, AlpineJS, TailwindCSS and many others such as Vite, Rome, Vitest, Pint, PHPStan, Larastan, Rector, etc.",
+  "description": "Start PHP applications using Laravel preconfigured with TypeScript, Livewire, AlpineJS, TailwindCSS and many others such as Bun, Vite, Rome, Pint, PHPStan, Larastan, Rector, etc.",
   "keywords": [
     "alpinejs",
+    "bun",
     "composer",
     "laravel",
     "larastan",
@@ -18,8 +19,7 @@
     "starter-template",
     "tailwindcss",
     "typescript",
-    "vitejs",
-    "vitest"
+    "vitejs"
   ],
   "homepage": "https://packagist.org/packages/sikessem/starter",
   "license": "MIT",

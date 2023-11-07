@@ -19,7 +19,7 @@
 
 # Sikessem Starter
 
-Start [PHP][php-home] applications using [Laravel][laravel-home] preconfigured with [TypeScript][typescript-home], [Livewire][livewire-home], [Alpine.js][alpinejs-home], [TailwindCSS][tailwindcss-home] and many others such as [Vite.js][vitejs-home], [Rome][rome-home], [Vitest][vitest-home], [Pint][pint-home], [PHPStan][phpstan-home], [Larastan][larastan-home], [Rector][rector-home]
+Start [PHP][php-home] applications using [Laravel][laravel-home] preconfigured with [TypeScript][typescript-home], [Livewire][livewire-home], [Alpine.js][alpinejs-home], [TailwindCSS][tailwindcss-home] and many others such as [Bun][bun-home], [Vite.js][vitejs-home], [Rome][rome-home], [Pint][pint-home], [PHPStan][phpstan-home], [Larastan][larastan-home], [Rector][rector-home].
 
 ## 🔖 Contents
 
@@ -126,7 +126,7 @@ composer analyse
 
 #### ✅ Run unit tests
 
-- using **Vitest**:
+- using **Bun**:
 
 ```shell
 bun run test
@@ -248,7 +248,7 @@ The Sikessem Starter is open-sourced software licensed under the  [MIT License](
 [tailwindcss-home]: https://tailwindcss.com "TailwindCSS"
 [vitejs-home]: https://vitejs.dev "Vite.js"
 [rome-home]: https://rome.tools "Rome"
-[vitest-home]: https://vitest.dev "Vitest"
+[bun-home]: https://bun.sh "Bun"
 [pint-home]: https://github.com/laravel/pint "Laravel Pint"
 [phpstan-home]: https://phpstan.org "PHPStan"
 [larastan-home]: https://github.com/nunomaduro/larastan "Larastan"
