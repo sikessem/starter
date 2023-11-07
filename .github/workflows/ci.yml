@@ -38,6 +38,12 @@ jobs:
       - name: 📦️ Compile assets
         run: bun run build
 
+      - name: 🚚 Upload distribution files
+        uses: actions/upload-artifact@v3
+        with:
+          name: dist-files
+          path: public/static
+
   serve:
     needs: build
     runs-on: ${{ matrix.os }}
@@ -111,8 +117,14 @@ jobs:
       - name: ⚡️ Optimize Stuffs
         run: set -e && php artisan optimize --env=ci
 
+      - name: 🚚 Download distribution files
+        uses: actions/download-artifact@v3
+        with:
+          name: dist-files
+          path: public/static
+
       - name: 📂  List public/
-        run: ls public/
+        run: ls public/static
 
       - name: 🧪 Test features
         run: |
