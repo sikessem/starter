@@ -104,10 +104,10 @@ Then visit [http://my-app.local:8000/](http://my-app.local:8000/)
 
 #### 🧹 Keep a modern codebase
 
-- with **Rome**:
+- with **Biome**:
 
 ```shell
-bun run check
+bun check
 ```
 
 - with **Pint**:
@@ -141,7 +141,7 @@ composer test
 🚀 Execute end-to-end testing with **Playwright**:
 
 ```shell
-bun run e2e
+bun e2e
 ```
 
 #### 🐛 Check all code bugs
@@ -149,7 +149,7 @@ bun run e2e
 - Frontend:
 
 ```shell
-bun run debug
+bun debug
 ```
 
 - Backend:
@@ -160,10 +160,10 @@ composer debug
 
 ## 📋 Requirements
 
-- **Requires [PHP 8.1+](https://php.net/releases/)** (at least 8.1.21 recommended to avoid potential bugs).
-- **Requires [Bun 1.0+](https://bun.sh/)** (at least 1.0.4 recommended to avoid potential bugs).
-- **Requires [Composer >=2.5.8](https://getcomposer.org/)** to manage [PHP][php-link] dependencies.
-- **Requires [Git ~2.40.0](https://git-scm.com/)** to manage source code.
+- **Requires [PHP 8.1+](https://php.net/releases/)** (at least 8.1.24 recommended to avoid potential bugs).
+- **Requires [Bun 1.0+](https://bun.sh/)** (at least 1.0.9 recommended to avoid potential bugs).
+- **Requires [Composer >=2.6.5](https://getcomposer.org/)** to manage [PHP][php-link] dependencies.
+- **Requires [Git ~2.42.0](https://git-scm.com/)** to manage source code.
 
 ## 📖 Documentation
 

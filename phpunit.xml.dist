@@ -14,7 +14,8 @@
   </php>
   <source>
     <include>
-      <directory suffix=".php">./app/src</directory>
+      <directory suffix=".php">./app</directory>
+      <directory suffix=".php">./src</directory>
     </include>
   </source>
 </phpunit>

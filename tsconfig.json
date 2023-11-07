@@ -1,8 +1,8 @@
 {
   "include": [
-    "app/res/assets/types/**/*",
-    "app/res/assets/scripts/**/*",
-    "app/res/views/**/*",
+    "resources/assets/types/**/*",
+    "resources/assets/scripts/**/*",
+    "resources/views/**/*",
   ],
   "exclude": [
     "node_modules",
@@ -28,7 +28,7 @@
     "outDir": "tmp",
     "noEmit": true,
     "typeRoots": [
-      "./app/res/assets/types",
+      "./resources/assets/types",
       "./node_modules/@types",
       "./node_modules",
     ],
@@ -40,19 +40,19 @@
     "baseUrl": ".",
     "paths": {
       "App/Assets/*": [
-        "app/res/assets/*",
+        "resources/assets/*",
       ],
       "App/Images/*": [
-        "app/res/assets/images/*",
+        "resources/assets/images/*",
       ],
       "App/Styles/*": [
-        "app/res/assets/styles/*",
+        "resources/assets/styles/*",
       ],
       "App/Scripts/*": [
-        "app/res/assets/scripts/*",
+        "resources/assets/scripts/*",
       ],
       "App/Types/*": [
-        "app/res/assets/types/*",
+        "resources/assets/types/*",
       ],
     },
     "noImplicitAny": true,

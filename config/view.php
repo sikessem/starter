@@ -14,6 +14,7 @@ return [
     */
 
     'paths' => [
+        app()->templatePath(),
         resource_path('views'),
     ],
 

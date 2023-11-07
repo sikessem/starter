@@ -12,7 +12,7 @@
                 <meta name="{{ $meta_tag['name'] }}" content="{{ $meta_tag['content'] }}"/>
             @endforeach
         @endisset
-        @vite(['app/res/assets/styles/app.css', 'app/res/assets/scripts/app.ts'])
+        @vite(['resources/assets/styles/app.css', 'resources/assets/scripts/app.ts'])
         @livewireStyles
     @show
     </head>
