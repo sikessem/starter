@@ -1,12 +1,13 @@
-name: CI
+name: E2E
 
-permissions:
-  contents: read
-
-on: ['push', 'pull_request']
+on:
+  workflow_run:
+    workflows: ["CI"]
+    types:
+      - completed
 
 jobs:
-  build:
+  test:
     runs-on: ${{ matrix.os }}
     continue-on-error: ${{ matrix.experimental }}
     strategy:
@@ -14,8 +15,10 @@ jobs:
       matrix:
         os: [ubuntu-latest]
         bun: [1.0]
+        php: [8.2]
+        dependencies: [highest]
         experimental: [false]
-    name: 🍱 Build assets using Bun-${{ matrix.bun }} on ${{ matrix.os }}
+    name: 🚀 E2E testing with PHP-${{ matrix.php }} ${{ matrix.dependencies }} and Bun-${{ matrix.bun }} on ${{ matrix.os }}
 
     steps:
       - name: 🚚 Get latest code
@@ -26,34 +29,10 @@ jobs:
         with:
           bun-version: ${{ matrix.bun }}
 
-      - name: ✨ Install JavaScript dependencies
-        run: bun install
-
-      - name: ✅ Check code style
-        run: bun check
-
-      - name: 🧪 Test components
-        run: bun run test
-
-      - name: 📦️ Compile assets
-        run: bun run build
-
-  serve:
-    needs: build
-    runs-on: ${{ matrix.os }}
-    continue-on-error: ${{ matrix.experimental }}
-    strategy:
-      fail-fast: true
-      matrix:
-        os: [ubuntu-latest]
-        php: [8.1, 8.2]
-        dependencies: [lowest, highest]
-        experimental: [false]
-    name: 🌍 Serve with PHP-${{ matrix.php }} ${{ matrix.dependencies }} on ${{ matrix.os }}
-
-    steps:
-      - name: 🚚 Get latest code
-        uses: actions/checkout@v4
+      - name: 🔨 Install dependencies
+        run: |
+          bun install
+          bun run e2e.install
 
       - name: 📂 Cache dependencies
         id: composer-cache
@@ -66,21 +45,20 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-dependencies-php-${{ matrix.php }}-composer-
 
-      - name: 🎉 Setup PHP
+      - name: ✨ Setup PHP
         uses: shivammathur/setup-php@v2
         with:
           php-version: ${{ matrix.php }}
           extensions: curl, dom, gd, intl, mbstring, openssl, pdo, pdo_mysql, tokenizer, zip
           ini-values: error_reporting=E_ALL
-          tools: composer:v2, php-cs-fixer, phpunit, vimeo/psalm
-          coverage: pcov
+          tools: composer:v2
 
-      - name: ✨ Install PHP dependencies
+      - name: 🔧 Install Composer dependencies
         run: |
           composer install -q --no-ansi --no-cache --no-interaction --no-scripts --no-progress --prefer-dist
           composer update --${{ matrix.dependency-version }} --no-interaction --prefer-dist
 
-      - name: 🔧 Configure environment
+      - name: 🧑‍💻 Configure environment
         run: |
           cp .env.example .env.ci
           set -e
@@ -99,25 +77,11 @@ jobs:
           chmod -R 777 storage bootstrap/cache
           chmod -R 777 storage/
 
-      - name: 🧹 Clear Caches
-        run: set -e && php artisan optimize:clear --env=ci
-
-      - name: ✅ Check code lint
-        run: composer check
-
-      - name: ⚗️ Run static analysis
-        run: composer analyse
-
       - name: ⚡️ Optimize Stuffs
         run: set -e && php artisan optimize --env=ci
 
-      - name: 📂  List public/
-        run: ls public/
+      - name: 📦️ Compile assets
+        run: bun run build
 
-      - name: 🧪 Test features
-        run: |
-          set -e && php artisan serve --env=ci > /dev/null 2>&1 &
-          composer test
-
-      - name: 💚 Test the whole application
-        run: composer debug
+      - name: 🏆 Execute end-to-end testing
+        run: bun e2e
