@@ -1,7 +1,7 @@
 {
   "type": "project",
   "name": "sikessem/starter",
-  "description": "Start PHP applications using Laravel preconfigured with TypeScript, Livewire, AlpineJS, TailwindCSS and many others such as Bun, Vite, Rome, Pint, PHPStan, Larastan, Rector, etc.",
+  "description": "Start PHP applications using Laravel preconfigured with TypeScript, Livewire, AlpineJS, TailwindCSS and many others such as Bun, Vite, Biome, Pint, PHPStan, Larastan, Rector, etc.",
   "keywords": [
     "alpinejs",
     "bun",
@@ -14,7 +14,7 @@
     "php",
     "phpstan",
     "rector",
-    "rome",
+    "biome",
     "sikessem",
     "starter-template",
     "tailwindcss",
