@@ -1,0 +1,21 @@
+#!/usr/bin/env bun
+
+const args = process.argv.slice(2);
+
+const proc = Bun.spawn(["php", "artisan", ...args], {
+  cwd: process.cwd(),
+  env: process.env,
+  stdin: "inherit",
+  stdout: "inherit",
+  stderr: "inherit",
+  async onExit(proc, exitCode, signalCode, error) {
+    if (error) {
+      console.error(error);
+      process.exit(1);
+    }
+    
+    const result = await new Response(proc.stderr || proc.stdout).text();
+    exitCode !== 0 ? console.error(result) : console.log(result);
+    process.exit(exitCode);
+  },
+});
