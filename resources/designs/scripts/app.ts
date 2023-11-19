@@ -1,3 +1,3 @@
 import "./vendor";
 
-import.meta.glob(["../images/**"]);
+import.meta.glob(["../../assets/**"]);
