@@ -41,7 +41,7 @@
     "laravel/sanctum": "^3.3",
     "laravel/tinker": "^2.8",
     "livewire/livewire": "^3.1",
-    "sikessem/framework": "^0.3.0",
+    "sikessem/framework": "^0.4.0",
     "sikessem/ui": "^0.7.0",
     "spatie/laravel-sitemap": "^6.4"
   },

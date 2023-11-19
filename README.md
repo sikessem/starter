@@ -160,8 +160,8 @@ composer debug
 
 ## 📋 Requirements
 
-- **Requires [PHP 8.1+](https://php.net/releases/)** (at least 8.1.24 recommended to avoid potential bugs).
-- **Requires [Bun 1.0+](https://bun.sh/)** (at least 1.0.9 recommended to avoid potential bugs).
+- **Requires [PHP 8.1+](https://php.net/releases/)** (at least 8.1.25 recommended to avoid potential bugs).
+- **Requires [Bun 1.0+](https://bun.sh/)** (at least 1.0.13 recommended to avoid potential bugs).
 - **Requires [Composer >=2.6.5](https://getcomposer.org/)** to manage [PHP][php-link] dependencies.
 - **Requires [Git ~2.42.0](https://git-scm.com/)** to manage source code.
 
