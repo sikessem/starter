@@ -17,6 +17,9 @@ export default defineConfig(({ mode }: ConfigEnv) => {
     server: detectServerConfig({ host, port, base }),
     base,
     root,
+    build: {
+      manifest: "manifest.json",
+    },
     plugins: [
       laravel({
         input: [
