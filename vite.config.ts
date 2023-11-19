@@ -2,10 +2,10 @@ import fs from "node:fs";
 import { homedir } from "node:os";
 import { resolve } from "node:path";
 import laravel, { refreshPaths } from "laravel-vite-plugin";
-import { ServerOptions, defineConfig, loadEnv } from "vite";
+import { type ConfigEnv, ServerOptions, defineConfig, loadEnv } from "vite";
 import tsconfigPaths from "vite-tsconfig-paths";
 
-export default defineConfig(({ mode }) => {
+export default defineConfig(({ mode }: ConfigEnv) => {
   const env = loadEnv(mode, process.cwd(), "");
   const host = env.VITE_CONFIG_SERVER_HOST ?? "localhost";
   const base = env.VITE_CONFIG_SERVER_BASE ?? "/";
@@ -20,8 +20,8 @@ export default defineConfig(({ mode }) => {
     plugins: [
       laravel({
         input: [
-          "resources/assets/styles/app.css",
-          "resources/assets/scripts/app.ts",
+          "resources/designs/styles/app.css",
+          "resources/designs/scripts/app.ts",
         ],
         refresh: [...refreshPaths, "templates/**", "app/Views/**"],
         buildDirectory,
@@ -36,10 +36,11 @@ export default defineConfig(({ mode }) => {
     resolve: {
       alias: {
         "@assets": "resources/assets",
+        "@designs": "resources/designs",
         "@images": "resources/assets/images",
-        "@scripts": "resources/assets/scripts",
-        "@styles": "resources/assets/styles",
-        "@types": "resources/assets/types",
+        "@scripts": "resources/designs/scripts",
+        "@styles": "resources/designs/styles",
+        "@types": "resources/designs/types",
       },
     },
   };

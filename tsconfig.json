@@ -1,7 +1,7 @@
 {
   "include": [
-    "resources/assets/types/**/*",
-    "resources/assets/scripts/**/*",
+    "resources/designs/types/**/*",
+    "resources/designs/scripts/**/*",
     "resources/views/**/*",
   ],
   "exclude": [
@@ -35,24 +35,26 @@
     "types": [
       "node",
       "vite/client",
-      "vitest/globals",
     ],
     "baseUrl": ".",
     "paths": {
       "App/Assets/*": [
         "resources/assets/*",
       ],
+      "App/Designs/*": [
+        "resources/designs/*",
+      ],
       "App/Images/*": [
         "resources/assets/images/*",
       ],
       "App/Styles/*": [
-        "resources/assets/styles/*",
+        "resources/designs/styles/*",
       ],
       "App/Scripts/*": [
-        "resources/assets/scripts/*",
+        "resources/designs/scripts/*",
       ],
       "App/Types/*": [
-        "resources/assets/types/*",
+        "resources/designs/types/*",
       ],
     },
     "noImplicitAny": true,
