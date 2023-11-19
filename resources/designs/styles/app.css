@@ -6,6 +6,6 @@
 
 .app {
     &-brand {
-        content: url('../images/logo.svg');
+        content: url('@images/logo.svg');
     }
 }
