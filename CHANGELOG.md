@@ -2,6 +2,14 @@
 
 All notable changes to [Starter](https://github.com/sikessem/starter) will be documented in this file.
 
+## [Unreleased](https://github.com/sikessem/starter/compare/v0.1.0...HEAD)
+
+**Full Changelog:** [v0.0.1...v0.1.0](https://github.com/sikessem/starter/compare/v0.0.1...v0.1.0)
+
+## [v0.1.0](https://github.com/sikessem/starter/releases/tag/v0.1.0) - 2023-11-19
+
+- Improved the structure of the `resources` directory
+
 ## [v0.0.1](https://github.com/sikessem/starter/releases/tag/v0.0.1) - 2023-11-07
 
 - Updated the [sikessem/framework](https://github.com/sikessem/framework) to the latest version.
@@ -10,7 +18,3 @@ All notable changes to [Starter](https://github.com/sikessem/starter) will be do
 - Moved files from the `app/src/` directory to the `app/` directory to respect the Laravel project structure.
 - Added a new directory `src/` with the namespace `My\` for developing application-independent packages.
 - Fixed #3: Improved workflows by separating assets building and app serving into jobs and added a workflow for end-to-end testing.
-
-## [Unreleased](https://github.com/sikessem/starter/compare/v0.0.1...HEAD)
-
-**Full Changelog:** [v0.0.0...v0.0.1](https://github.com/sikessem/starter/compare/v0.0.0...v0.0.1)
