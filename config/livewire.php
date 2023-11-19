@@ -27,7 +27,7 @@ return [
     |
     */
 
-    'view_path' => resource_path('views/widgets'),
+    'view_path' => app()->templatePath('widgets'),
 
     /*
     |--------------------------------------------------------------------------
