@@ -1,4 +1,4 @@
-name: E2E
+name: CD
 
 on:
   workflow_run:
@@ -18,7 +18,7 @@ jobs:
         php: [8.2]
         dependencies: [highest]
         experimental: [false]
-    name: 🚀 E2E testing with PHP-${{ matrix.php }} ${{ matrix.dependencies }} and Bun-${{ matrix.bun }} on ${{ matrix.os }}
+    name: 🚀 Deploy with PHP-${{ matrix.php }} ${{ matrix.dependencies }} and Bun-${{ matrix.bun }} on ${{ matrix.os }}
 
     steps:
       - name: 🚚 Get latest code
