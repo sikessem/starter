@@ -50,7 +50,7 @@ Start [PHP][php-home] applications using [Laravel][laravel-home] preconfigured w
 [Use this template](https://github.com/sikessem/starter/generate) or create a new [Sikessem project](https://packagist.org/packages/sikessem/starter) via the [Composer](https://getcomposer.org/) `create-project` command (recommended):
 
 ```shell
-composer create-project sikessem/starter --prefer-source my-app
+composer create-project sikessem/starter my-app
 ```
 
 Where ***my-app*** is the name of your app.
