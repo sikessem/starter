@@ -1,4 +1,4 @@
-name: CI
+name: Tests
 
 permissions:
   contents: read
@@ -6,7 +6,7 @@ permissions:
 on: ['push', 'pull_request']
 
 jobs:
-  build:
+  tests:
     runs-on: ${{ matrix.os }}
     continue-on-error: ${{ matrix.experimental }}
     strategy:
@@ -14,8 +14,10 @@ jobs:
       matrix:
         os: [ubuntu-latest]
         bun: [1.0]
+        php: [8.1, 8.2]
+        dependencies: [lowest, highest]
         experimental: [false]
-    name: 🍱 Build assets using Bun-${{ matrix.bun }} on ${{ matrix.os }}
+    name: 👷 Test on PHP-${{ matrix.php }} ${{ matrix.dependencies }} and Bun-${{ matrix.bun }} under ${{ matrix.os }}
 
     steps:
       - name: 🚚 Get latest code
@@ -27,41 +29,11 @@ jobs:
           bun-version: ${{ matrix.bun }}
 
       - name: ✨ Install JavaScript dependencies
-        run: bun install
+        run: |
+          bun install
+          bun run e2e.install
 
-      - name: ✅ Check code style
-        run: bun check
-
-      - name: 🧪 Test components
-        run: bun run test
-
-      - name: 📦️ Compile assets
-        run: bun run build
-
-      - name: 🚚 Upload distribution files
-        uses: actions/upload-artifact@v3
-        with:
-          name: dist-files
-          path: public/static
-
-  serve:
-    needs: build
-    runs-on: ${{ matrix.os }}
-    continue-on-error: ${{ matrix.experimental }}
-    strategy:
-      fail-fast: true
-      matrix:
-        os: [ubuntu-latest]
-        php: [8.1, 8.2]
-        dependencies: [lowest, highest]
-        experimental: [false]
-    name: 🌍 Serve with PHP-${{ matrix.php }} ${{ matrix.dependencies }} on ${{ matrix.os }}
-
-    steps:
-      - name: 🚚 Get latest code
-        uses: actions/checkout@v4
-
-      - name: 📂 Cache dependencies
+      - name: ⚡️ Cache dependencies
         id: composer-cache
         run: |
           echo "dir=$(composer config cache-files-dir)" >> $GITHUB_OUTPUT
@@ -72,7 +44,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-dependencies-php-${{ matrix.php }}-composer-
 
-      - name: 🎉 Setup PHP
+      - name: 🔨 Setup PHP
         uses: shivammathur/setup-php@v2
         with:
           php-version: ${{ matrix.php }}
@@ -81,24 +53,30 @@ jobs:
           tools: composer:v2, php-cs-fixer, phpunit, vimeo/psalm
           coverage: pcov
 
-      - name: ✨ Install PHP dependencies
+      - name: 🔧 Install PHP dependencies
         run: |
           composer install -q --no-ansi --no-cache --no-interaction --no-scripts --no-progress --prefer-dist
           composer update --${{ matrix.dependency-version }} --no-interaction --prefer-dist
 
-      - name: 🔧 Configure environment
+      - name: 🧑‍💻 Configure environment
         run: |
-          cp .env.example .env.ci
+          cp .env.example .env.test
           set -e
-          sed -i "s|^\(APP_ENV=\s*\).*$|\1ci|" .env.ci
-          printf "The complete `.env.ci` ... \n\n"
-          cat .env.ci
+          sed -i "s|^\(APP_ENV=\s*\).*$|\1test|" .env.test
+          printf "The complete `.env.test` ... \n\n"
+          cat .env.test
+
+      - name: 📦️ Allow executables
+        run: |
+          set -e
+          chmod +x ./run
+          chmod +x ./artisan
 
       - name: 🔒️ Generate Key
         run: |
           set -e
-          php artisan key:generate --env=ci
-          php artisan queue:restart --env=ci
+          ./run key:generate --env=test
+          ./run queue:restart --env=test
 
       - name: 🔐 Directory Permissions
         run: |
@@ -106,7 +84,22 @@ jobs:
           chmod -R 777 storage/
 
       - name: 🧹 Clear Caches
-        run: set -e && php artisan optimize:clear --env=ci
+        run: set -e && ./run optimize:clear --env=test
+
+      - name: ✅ Check code style
+        run: bun check
+
+      - name: 🧪 Test components
+        run: bun run test
+
+      - name: 🍱 Compile assets
+        run: bun run build
+
+      - name: 📂  List distribution folder
+        run: ls public/static
+
+      - name: ⚡️ Optimize Stuffs
+        run: set -e && ./run optimize --env=test
 
       - name: ✅ Check code lint
         run: composer check
@@ -114,22 +107,13 @@ jobs:
       - name: ⚗️ Run static analysis
         run: composer analyse
 
-      - name: ⚡️ Optimize Stuffs
-        run: set -e && php artisan optimize --env=ci
-
-      - name: 🚚 Download distribution files
-        uses: actions/download-artifact@v3
-        with:
-          name: dist-files
-          path: public/static
-
-      - name: 📂  List public/
-        run: ls public/static
-
       - name: 🧪 Test features
         run: |
-          set -e && php artisan serve --env=ci > /dev/null 2>&1 &
+          set -e && ./run serve --env=test > /dev/null 2>&1 &
           composer test
 
       - name: 💚 Test the whole application
         run: composer debug
+
+      - name: 🚀 Execute end-to-end testing
+        run: bun e2e

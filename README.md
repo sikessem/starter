@@ -10,7 +10,6 @@
 [![packagist-version-icon]][packagist-version-link]
 [![packagist-download-icon]][packagist-download-link]
 [![license-icon]][license-link]
-[![enabled-icon]][enabled-link]
 [![actions-icon]][actions-link]
 [![pr-icon]][pr-link]
 [![twitter-icon]][twitter-link]
@@ -220,10 +219,7 @@ The Sikessem Starter is open-sourced software licensed under the  [MIT License](
 [packagist-download-icon]: https://img.shields.io/packagist/dt/sikessem/starter
 [packagist-download-link]: https://packagist.org/packages/sikessem/starter "Starter Downloads"
 
-[enabled-icon]: https://img.shields.io/badge/Starter-enabled-brightgreen.svg?style=flat
-[enabled-link]: https://github.com/sikessem/starter "Starter enabled"
-
-[actions-icon]: https://github.com/sikessem/starter/workflows/CI/badge.svg
+[actions-icon]: https://github.com/sikessem/starter/workflows/Tests/badge.svg
 [actions-link]: https://github.com/sikessem/starter/actions "Starter status"
 
 [pr-icon]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg?color=brightgreen
