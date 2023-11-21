@@ -2,9 +2,14 @@
 
 All notable changes to [Starter](https://github.com/sikessem/starter) will be documented in this file.
 
-## [Unreleased](https://github.com/sikessem/starter/compare/v0.1.0...HEAD)
+## [Unreleased](https://github.com/sikessem/starter/compare/v0.2.0...HEAD)
 
-**Full Changelog:** [v0.0.1...v0.1.0](https://github.com/sikessem/starter/compare/v0.0.1...v0.1.0)
+**Full Changelog:** [v0.1.0...v0.2.0](https://github.com/sikessem/starter/compare/v0.1.0...v0.2.0)
+
+## [v0.2.0](https://github.com/sikessem/starter/releases/tag/v0.2.0) - 2023-11-21
+
+- Improved documentation
+- Improved the tests workflow
 
 ## [v0.1.0](https://github.com/sikessem/starter/releases/tag/v0.1.0) - 2023-11-19
 
