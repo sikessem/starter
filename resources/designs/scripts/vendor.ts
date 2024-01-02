@@ -1,7 +1,7 @@
-import axios from 'axios';
+import axios from "axios";
 
-import Alpine from 'alpinejs';
-import focus from '@alpinejs/focus';
+import focus from "@alpinejs/focus";
+import Alpine from "alpinejs";
 
 /**
  * We'll load the axios HTTP library which allows us to easily issue requests
@@ -9,12 +9,11 @@ import focus from '@alpinejs/focus';
  * CSRF token as a header based on the value of the "XSRF" token cookie.
  */
 window.axios = axios;
-window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+window.axios.defaults.headers.common["X-Requested-With"] = "XMLHttpRequest";
 
 window.Alpine = Alpine;
 Alpine.plugin(focus);
 Alpine.start();
-
 
 /**
  * Echo exposes an expressive API for subscribing to channels and listening

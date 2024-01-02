@@ -36,17 +36,17 @@
     "chat": "https://github.com/orgs/sikessem/discussions"
   },
   "require": {
-    "php": "^8.1||^8.2",
+    "php": "*",
     "guzzlehttp/guzzle": "^7.8",
     "laravel/sanctum": "^3.3",
     "laravel/tinker": "^2.8",
-    "livewire/livewire": "^3.1",
+    "livewire/livewire": "^3.3",
     "sikessem/framework": "^0.4.0",
     "sikessem/ui": "^0.7.0",
     "spatie/laravel-sitemap": "^6.4"
   },
   "require-dev": {
-    "sikessem/laravel-devtools": "^0.8.0"
+    "sikessem/laravel-devtools": "^0.9.0"
   },
   "autoload": {
     "psr-4": {
